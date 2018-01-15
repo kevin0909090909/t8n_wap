@@ -1,0 +1,147 @@
+// @Date:   2017-01-05T10:03:49+08:00
+// @Last modified time: 2017-01-19T14:32:08+08:00
+
+// html {
+//     font-size: 62.5%; /* 10÷16=62.5% */
+// }
+// @media only screen and (min-width: 481px){
+//     html {
+//         font-size: 94%!important; /* 15.04÷16=94% */
+//     }
+// }
+// @media only screen and (min-width: 561px){
+//     html {
+//         font-size: 109%!important; /* 17.44÷16=109% */
+//     }
+// }
+// @media only screen and (min-width: 641px){
+//     html {
+//         font-size: 125%!important; /* 20÷16=125% */
+//     }
+// }
+
+html,body,ul,li{
+  margin: 0 0;
+  padding: 0 0;
+}
+html{
+  font-size: 10px;
+  font-family: \5FAE\8F6F\96C5\9ED1 !important; 
+}
+
+ul,li{
+    list-style: none;
+}
+
+#app{
+  max-width: 640px;
+  margin: 0 auto !important;
+  & > div:first-child{
+    padding-bottom: 55px;
+  }
+}
+
+@for $i from 0 through 2{
+    @for $j from 0 through 9{
+        .f#{$i}#{$j}{
+            font-size: #{$i}#{'.'}#{$j}rem;
+        }
+    }
+}
+
+.vertical-align-middle{
+  vertical-align: middle;
+}
+
+.display-block{
+    display: block;
+}
+.display-inline-block{
+    display: inline-block;
+}
+.display-none{
+    display: none;
+}
+
+.positon-relative{
+  position: relative;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+
+$margin-max : 50;
+@for $i from 1 through 16{
+    $i : $i * 5;
+    .m{
+        margin: #{$i}px;
+    }
+
+    .m-t-#{$i}{
+        margin-top: #{$i}px;
+    }
+    .m-b-#{$i}{
+        margin-bottom: #{$i}px;
+    }
+    .m-l-#{$i}{
+        margin-left: #{$i}px;
+    }
+    .m-r-#{$i}{
+        margin-right: #{$i}px;
+    }
+
+    .m-tb-#{$i}{
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+    }
+    .m-lr-#{$i}{
+        margin-right: #{$i}px;
+        margin-left: #{$i}px;
+    }
+
+    .p{
+        margin: #{$i}px;
+    }
+
+    .p-t-#{$i}{
+        margin-top: #{$i}px;
+    }
+    .p-b-#{$i}{
+        margin-bottom: #{$i}px;
+    }
+    .p-l-#{$i}{
+        margin-left: #{$i}px;
+    }
+    .p-r-#{$i}{
+        margin-right: #{$i}px;
+    }
+
+    .p-tb-#{$i}{
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+    }
+    .p-lr-#{$i}{
+        margin-right: #{$i}px;
+        margin-left: #{$i}px;
+    }
+
+}
+
+
+.fw-bold{
+  font-weight: bold;
+}
+
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}

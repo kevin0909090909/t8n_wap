@@ -1,0 +1,72 @@
+// @Author: lz
+// @Date:   2017-01-06T17:57:40+08:00
+// @Last modified by:   lz
+// @Last modified time: 2017-01-09T09:46:20+08:00
+
+$circleRaduis : 96px;
+
+.circle-container-v2{
+  height: $circleRaduis;
+  width: $circleRaduis;
+  position: relative;
+  margin: 0 auto;
+  .cir-group{
+    position: absolute;
+    height: ($circleRaduis - 5) / 2;
+    width: ($circleRaduis - 5) / 2;
+    background:#e5c949;
+    box-sizing: border-box;
+    .cir{
+      position: absolute;
+      height: $circleRaduis / 2 * 0.7;
+      width: $circleRaduis / 2 * 0.7;
+      background:#fff8ed;
+      box-sizing: border-box;
+    }
+  }
+
+  .cir1{
+    left: 0px;
+    top: 0px;
+    border-top-left-radius: 100%;
+    .cir{
+      bottom: 0px;
+      right: 0px;
+      border-radius: 100% 0 0 ;
+    }
+  }
+  .cir2{
+    top: 0px;
+    right: 0px;
+    border-top-right-radius: 100%;
+    background: #c09b16;
+    .cir{
+      left: 0px;
+      bottom: 0px;
+      border-radius:  0 100% 0 0;
+    }
+  }
+
+  .cir3{
+    left: 0px;
+    bottom: 0px;
+    border-bottom-left-radius: 100%;
+    background: #c09b16;
+    .cir{
+      right: 0px;
+      top: 0px;
+      border-radius:  0 0 0 100% ;
+    }
+  }
+  .cir4{
+    bottom: 0px;
+    right: 0px;
+    border-bottom-right-radius: 100%;
+    background: #8e7005;
+    .cir{
+      left: 0px;
+      top: 0px;
+      border-radius:  0 0 100% ;
+    }
+  }
+}
